@@ -1,1 +1,40 @@
 <!-- ブランチ確認 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id = timer>0</h1>
+    <script>
+      let secounds = -1; // リロードした瞬間にもcount_upが実行されている様子だったため
+      let interval_id;
+      const pop_up = "2秒経過";
+      
+      document.getElementById("timer").innerHTML = secounds;
+
+      function counter(){
+        interval_id = setInterval(count_up, 1000);
+      }
+      
+      function count_up(){
+        secounds += 1;
+        document.getElementById("timer").innerText = secounds;
+        if (secounds >= 2){
+          aleat();
+          clearInterval(interval_id)
+        }
+      }
+
+      function aleat(){
+        alert(pop_up);
+      }
+
+      counter()
+      count_up()
+      // alert()
+      </script>
+  </body>
+</html>
