@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <div class="target">
+    <p>ダミーテキストB</p>
+    <p>ダミーテキストC</p>
+    <p>ダミーテキストD</p>
+    <p>ダミーテキストE</p>
+    <p>ダミーテキストF</p>
+  </div>
+</body>
+
+</html>
+<!-- 「要素頭に子要素を追加しよう」
+jqueryを使って、文頭に文字要素を追加しましょう！ -->
+
+<script>
+  $(document).ready(function () {
+    $(".target").prepend("<p>ダミーテキストA</p>");
+  }); 
+</script>
+
+<!-- htmlに要素を追加
+     prepend:子要素として先頭に挿入
+     append:子要素として末尾に挿入
+     before:同じ階層の要素として上に挿入
+     after:同じ階層の党祖として下に挿入 -->
