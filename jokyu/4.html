@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!--文字数をカウントして5文字以上ならtrueを返す関数を作ろう
+① 関数 ninja 定義
+② 引数は str とする
+③ ninjaをアラート表示-->
+  <script>
+    function ninja(str){
+      let count = str.length;
+      if (count >= 5){
+        return true;
+      }else{
+        return false;
+      }
+    };
+    alert(ninja("CODE"))
+  </script>
+</body>
+</html>

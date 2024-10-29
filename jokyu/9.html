@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リストの並び替え</title>
+</head>
+
+<body>
+  <!--複数のリストアイテムを昇順または降順に並び替える機能を持つアプリを作成してください。-->
+  <main>
+    <h1>リストの並び替え</h1>
+    <ul id="itemList">
+      <li>忍者 3</li>
+      <li>忍者 1</li>
+      <li>忍者 4</li>
+      <li>忍者 2</li>
+    </ul>
+    <button onclick="sortList('asc')">昇順に並び替え</button>
+    <button onclick="sortList('desc')">降順に並び替え</button>
+  </main>
+  <script>
+    function sortList(order) {
+      // ul 要素とその子 li 要素を取得
+      let list = document.getElementById("itemList");
+      let items = Array.from(list.getElementsByTagName("li"));//　子要素を配列に変換
+
+      // li アイテムのテキスト内容を取得し、数値でソート
+      function compare(a ,b){
+        let numA = parseInt(a.textContent.replace("忍者 ", ""), 10); // 忍者1を1のみに変換
+        let numB = parseInt(b.textContent.replace("忍者 ", ""), 10);
+
+        if (order == "asc"){
+          return numA - numB;
+        }else{
+          return numB - numA;
+        }
+      }
+      
+      //　ソートメソッドは比較関数がa-bで負の値を返したときaをbより前に並べる(昇順)。降順は逆。
+      items.sort(compare);
+
+      // ソートされた要素を再度 ul に追加
+      items.forEach(item => list.appendChild(item));
+    }
+
+  </script>
+</body>
+
+</html>

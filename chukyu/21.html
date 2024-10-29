@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!--[data-delete]をclickしたらその属性を削除しよう-->
+  <main>
+    <div data-delete="id">idを削除</div>
+    <div data-delete="class">classを削除</div>
+    <div id="red" class="blue" data-delete-target>忍者CODE</div>
+  </main>
+  <style>
+    .blue {
+      color: blue;
+    }
+
+    #red {
+      color: red;
+    }
+  </style>
+  <script>
+    // [data-delete] 属性を持つすべての要素を選択 []は属性セレクタ
+    let deletebtns = document.querySelectorAll("[data-delete]");
+    let target = document.querySelector("[data-delete-target]");
+
+    deletebtns.forEach(button => {
+      button.addEventListener("click", function () {
+        // クリックされたボタンの data-delete 属性値を取得
+        let attributeToDelete = button.getAttribute("data-delete");
+        if (attributeToDelete == "id") {
+          target.removeAttribute("id");
+        }else{
+          target.removeAttribute("class");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
