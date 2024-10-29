@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+  </head>
+  <body>
+    <div class="trigger" style="margin-bottom: 30px;">クリックしてください</div>
+    <div class="target">文字がふわっと現れるよ！</div>
+
+    <style>
+      /* .target{
+        transition: 1s;
+      } */
+    </style>
+    
+    <script>
+      var fadeIn = document.querySelector(".target");
+      fadeIn.style.opacity = "0";
+      function fade_in(){
+        fadeIn.style.transition = "opacity 1s ease-in-out";
+        fadeIn.style.opacity = "1";
+      }
+
+      var trigger = document.querySelector(".trigger");
+      trigger.addEventListener("click", fade_in);
+    </script>
+  </body>
+</html>
