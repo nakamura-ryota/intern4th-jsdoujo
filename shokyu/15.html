@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+  </head>
+  <body>
+    <p id="click">クリックしてください</p>
+    <p id="hide">文字が消えます!</p>
+
+    <script>
+      function show_hide(){
+        var s_h = document.getElementById("hide")
+        // if (s_h.style.display === "none"){
+        //   s_h.style.display = "block";
+        // }
+        // else {
+        //   s_h.style.display = "none";
+        // }
+        s_h.style.display ="none";
+      }
+
+      document.getElementById("click").addEventListener("click",show_hide)
+    </script>
+  </body>
+</html>
