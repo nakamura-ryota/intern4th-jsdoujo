@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+  </head>
+  <body>
+    <h1>数値の2倍を計算</h1>
+    <input type="number" id="numberInput" placeholder="数値を入力">
+    <button onclick="calculateDouble()">計算</button>
+    <p>2倍の値:<span id="result"></span></p>
+    
+    <script>
+
+      // getElementByIdは数値のまま参照できないので
+      // 一度""をつけて文字列として持ってくる
+      // その後、valueで再度数値化して計算
+      function calculateDouble() {
+        // ユーザーが入力した数値を取得する
+        let input_index = document.getElementById("numberInput");
+        // 数値の2倍を計算する
+        let double = input_index.value * 2;
+        // 計算結果を表示する
+        document.getElementById('result').textContent = double;
+      }
+    </script>
+  </body>
+</html>
