@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+      *{margin: 0;padding: 0;list-style: none;box-sizing: border-box;}
+
+      .list{
+        width: 1000px;
+        margin: 300px auto 0 auto;
+        overflow: hidden;
+      }
+
+      .list li{
+        width: 300px;
+        float: left;
+        padding: 20px;
+        background-color: pink;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>これは忍者CODEの問題です。</li>
+      <li>これは忍者CODEの問題です。
+    これは忍者CODEの問題です。これは忍者CODEの問題です。
+    これは忍者CODEの問題です。これは忍者CODEの問題です。これは忍者CODEの問題です。これは忍者CODEの問題です。
+    これは忍者CODEの問題です。</li>
+      <li>これは忍者CODEの問題です。これは忍者CODEの問題です。これは忍者CODEの問題です。これは忍者CODEの問題です。</li>
+    </ul>
+
+    <script>
+      // すべての li 要素を取得
+      const listItems = document.querySelectorAll("li");
+
+      // forEach で各 li 要素をループさせてそれぞれの高さを取得し、一番大きい値を maxHeight に保存
+      let maxHeight = 0;
+      listItems.forEach(item => {
+        const itemHeight = item.offsetHeight;
+        if (itemHeight > maxHeight) {
+          maxHeight = itemHeight;
+        }
+      });
+      // offsetHeight は線やスクロールバーを含む高さを整数で得る
+      //コンテンツが伸びて縦スクロールが発生する場合は、伸びた分の高さがセット
+
+      // scrollHeight は線・マージン・スクロールバーを含まない内側のサイズ
+      //コンテンツが伸びて縦スクロールが発生する場合は、伸びた分の高さがセット
+
+      // clientHeight は線・マージンを含まない内側のサイズ
+      // コンテンツの伸び縮みは影響しない
+
+      // forEach で各 li 要素をループさせ、maxHeightに上書き
+      listItems.forEach(item => {
+        item.style.height = `${maxHeight}px`;
+      });
+
+    </script>
+  </body>
+</html>
