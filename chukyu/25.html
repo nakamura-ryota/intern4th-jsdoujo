@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25.「入力値が変わったら表示しよう」</title>
+  </head>
+  <body>
+    <div class="val"></div>
+    <input type="text">
+
+    <script>
+      // input タグの要素(入力された文字)を〉取得
+      // 18との違い...変数定義を const から let にすることで input に入る文字を再定義可能にした
+      let inputText = document.querySelector("input");
+      
+      inputText.addEventListener("click", display);
+
+      // クリックしたときに文字を出す関数
+      function display(){
+        document.querySelector(".val").innerHTML = inputText.value;
+      }
+    </script>
+  </body>
+</html>
