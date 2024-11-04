@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16.「最大値を取得しよう」</title>
+  </head>
+  <body>
+    <p></p>
+    
+    <script>
+      const my_array = [2,19,59,203,5]; 
+
+      let max = 0;
+      
+      // my_array の要素を一つずつ比較していく
+      // 大きい方の値を max に更新する。
+      my_array.forEach(element => {
+        if (max < element){
+          max = element;
+        }
+      });
+
+      alert(max);
+      document.querySelector("p").innerHTML = my_array; // おまけで表示している
+    </script>
+  </body>
+</html>
