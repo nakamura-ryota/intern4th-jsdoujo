@@ -14,10 +14,11 @@
   </main>
   <script>
     function convertToUpper(){
+      //変換が押されたらこの関数起動
       let input = document.getElementById('textInput');
       let output = document.getElementById('upperText');
-      let upperText = input.value.toUpperCase();
-      output.innerHTML = "大文字: " + upperText;
+      let upperText = input.value.toUpperCase();//.valueで値取得、toUpperCase()で大文字に変換
+      output.textContent = "大文字: " + upperText;
     }
   </script>
 </body>

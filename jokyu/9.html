@@ -26,11 +26,10 @@
       let list = document.getElementById("itemList");
       let items = Array.from(list.getElementsByTagName("li"));//　子要素を配列に変換
 
-      // li アイテムのテキスト内容を取得し、数値でソート
+      // li アイテムのテキスト内容を取得し、数値でソートする関数
       function compare(a ,b){
         let numA = parseInt(a.textContent.replace("忍者 ", ""), 10); // 忍者1を1のみに変換
         let numB = parseInt(b.textContent.replace("忍者 ", ""), 10);
-
         if (order == "asc"){
           return numA - numB;
         }else{

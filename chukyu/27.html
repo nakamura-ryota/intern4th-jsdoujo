@@ -13,8 +13,9 @@
   <script>
     let input = document.querySelector("input");
     let val = document.querySelector(".val");
+    // addEventListenerの引数がkeyupでキーをUPした時にイベント実行
     input.addEventListener("keyup" , function(){
-      val.innerHTML = input.value;
+      val.textContent = input.value;
     });
   </script>
 </body>

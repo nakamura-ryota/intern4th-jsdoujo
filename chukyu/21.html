@@ -28,6 +28,7 @@
     let target = document.querySelector("[data-delete-target]");
 
     deletebtns.forEach(button => {
+      // buttonにはdeletebtnsの中身が入る
       button.addEventListener("click", function () {
         // クリックされたボタンの data-delete 属性値を取得
         let attributeToDelete = button.getAttribute("data-delete");

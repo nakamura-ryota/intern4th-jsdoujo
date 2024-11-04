@@ -43,7 +43,8 @@
   </style>
   <script>
     let listitems = document.querySelectorAll("li");
-    // 各li要素にクリックイベントを追加
+    // 各li要素にクリックイベントを追加 =>はアロー関数function(li, index){}を省略して書ける
+    // forEachの処理(コールバック関数)はvalue,index,arrayの3つの引数を取得できる
     listitems.forEach((li, index) => {
       li.addEventListener("click", function () {
         alert("あなたは" + (index + 1) + "番目を押しました！");
