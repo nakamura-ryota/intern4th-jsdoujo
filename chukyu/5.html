@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+</head>
+<!-- 「inputの値を取得して誕生日を祝おう」
+inputタグに入力した値を取得して、
+自分の誕生日なら「おめでとう！」と表示させよう。
+
+※bootstrapを読み込むと
+見本通りのレイアウトが綺麗になります。 -->
+
+<body>
+  <div class="input-group mb-3">
+    <h1 id="congratsMessage">誕生日おめでとう！</h1>
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">@</span>
+    </div>
+    <input type="date" id="birthday" class="form-control" value="2001-08-09" placeholder="誕生日">
+    <button class="btn btn-primary" onclick="checkBirthday()">確認</button>
+  </div>
+</body>
+
+</html>
+<style>
+  h1 {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    width: 100%;
+    font-weight: bold;
+    color: #458fa0;
+    display: none;
+  }
+
+  .input-group {
+    width: 500px;
+    margin: 300px auto 0 auto;
+  }
+</style>
+
+<script>
+  function checkBirthday() {
+    const inputDate = document.getElementById("birthday").value; //入力された誕生日の値を取得
+    const myBirthday = "2001-08-09"; //自分の誕生日の日付と比較
+    if (inputDate === myBirthday) {
+      document.getElementById("congratsMessage").style.display = "block";
+    } else {
+      alert("今日はあなたの誕生日ではありません。");
+    }
+  }
+</script>
