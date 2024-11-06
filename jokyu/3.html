@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 「配列が全て数値かを判断しよう」
+
+配列の中身が全て条件に満たしているかを判断しよう
+① 変数 ninja に ["5", 6, "3"] を代入
+② ninjaをアラート表示 -->
+
+<body>
+  <script>
+    const ninja = [5, 6, 3]; 
+    const Numbers = ninja.every(item => typeof item === "number"); //配列の中身が全て数値化判定
+    alert(Numbers ? "true" : "false");
+  </script>
+</body>
+
+</html>

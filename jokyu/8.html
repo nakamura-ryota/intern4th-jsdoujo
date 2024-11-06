@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字数カウント</title>
+</head>
+<!-- 「リアルタイムで文字数をカウントしよう」
+
+ユーザーが入力するテキストの文字数をリアルタイムで表示するアプリを作成してください。 -->
+
+<body>
+  <h1>文字数をカウント</h1>
+  <!-- textareaタグにイベントを追加する -->
+  <textarea id="textInput" rows="15" cols="60" placeholder="テキストを入力" oninput="countCharacters()"></textarea>
+  <p>文字数: <span id="charCount">0</span></p>
+
+  <!-- ここにScriptの処理を書く -->
+   <script>
+      function countCharacters() {
+        const text = document.getElementById("textInput").value;//textarea内のテキストを取得
+        const charCount = text.length; //テキストの長さをカウント
+        document.getElementById("charCount").textContent = charCount; //文字数を表示
+      }
+   </script>
+</body>
+
+</html>
