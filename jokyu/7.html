@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.「複数ある入力値の合計を表示させよう」</title>
+</head>
+<body>
+    <h1>数値の合計を計算</h1>
+    <input type="number" id="num1" placeholder="数値1">
+    <input type="number" id="num2" placeholder="数値2">
+    <input type="number" id="num3" placeholder="数値3">
+    <button onclick="calculateSum()">合計を計算</button>
+    <p>合計:<span id="sumResult"></span></p>
+
+    <!-- ここにScriptの処理を書く -->
+    <script>
+      
+      function calculateSum(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let num3 = document.getElementById("num3").value;
+        // parseIntは文字列を数値として変換するメソット
+        // 普通にnum1+num2+num3をしても数字が連結するだけだったため
+        let sum = parseInt(num1,10) + parseInt(num2,10) + parseInt(num3,10);
+        document.getElementById("sumResult").textContent = sum;
+      }
+    </script>
+</body>
+</html>
