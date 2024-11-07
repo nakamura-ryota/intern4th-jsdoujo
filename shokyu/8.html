@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <!--jqueryを使って、クラスを追加させましょう！-->
+  <main>
+    <p>この文字を赤色にしてください。</p>
+  </main>
+  <style>
+    p.is-active {
+      color: red;
+    }
+  </style>
+  <script>
+    $("p").addClass("is-active")
+  </script>
+</body>
+</html>

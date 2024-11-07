@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!--inputに値を入力して、キーをUPした時に .valに値を表示しよう。-->
+  <main>
+    <div class="val">忍者CODE</div>
+    <input type="text">
+  </main>
+  <script>
+    let input = document.querySelector("input");
+    let val = document.querySelector(".val");
+    // addEventListenerの引数がkeyupでキーをUPした時にイベント実行
+    input.addEventListener("keyup" , function(){
+      val.textContent = input.value;
+    });
+  </script>
+</body>
+</html>

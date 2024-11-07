@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+    <!--ユーザーが入力したテキストを大文字に変換するアプリを作成してください。--> 
+  <main>
+    <h1>テキストの大文字変換</h1>
+    <input type="text" id="textInput" placeholder="テキストを入力">
+    <button onclick="convertToUpper()">変換</button>
+    <p id="upperText"></p>
+  </main>
+  <script>
+    function convertToUpper(){
+      //変換が押されたらこの関数起動
+      let input = document.getElementById('textInput');
+      let output = document.getElementById('upperText');
+      let upperText = input.value.toUpperCase();//.valueで値取得、toUpperCase()で大文字に変換
+      output.textContent = "大文字: " + upperText;
+    }
+  </script>
+</body>
+</html>

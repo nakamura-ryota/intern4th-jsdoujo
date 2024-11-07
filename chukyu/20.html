@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!--.deleteを押したら最後のliを削除しよう-->
+  <main>
+    <div class="delete">削除</div>
+    <ul>
+      <li>忍者CODE1</li>
+      <li>忍者CODE2</li>
+      <li>忍者CODE3</li>
+      <li>忍者CODE4</li>
+      <li>忍者CODE5</li>
+    </ul>
+  </main>
+  <script>
+    let deletebtn = document.querySelector(".delete");
+    deletebtn.addEventListener("click",function(){
+      let listitems = document.querySelectorAll("li");
+      let lastitem = listitems[listitems.length - 1];//listitemsの最後の要素
+      lastitem.parentNode.removeChild(lastitem);// 消去
+    });
+  </script>
+</body>
+
+</html>
