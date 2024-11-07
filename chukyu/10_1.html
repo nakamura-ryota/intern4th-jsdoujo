@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_1</title>
+</head>
+<body>
+    <script>
+        const now   = new Date();       
+        const now_month = now.getMonth() + 1;    //月
+
+        function month_judge( month ){
+            if( now_month == month ){
+                alert("今月の月です！");
+            }else{
+                alert("今月の月ではありません！");
+            }
+        }
+
+        month_judge(3);
+    </script>
+</body>
+</html>

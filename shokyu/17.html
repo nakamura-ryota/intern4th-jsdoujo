@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17番</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(function() {
+            $('.trigger').click(function() {
+             $('.target').fadeOut("slow");
+             });
+        });
+    </script>
+    <div class="trigger" style="margin-bottom: 30px;">クリックしてください</div>
+    <div class="target">文字がふわっと消えます！</div>
+    
+</body>
+</html>

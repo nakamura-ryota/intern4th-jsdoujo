@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
+<!-- 「要素の横幅を取得しよう」
+
+jqueryを使って
+要素の横幅をアラートに出して見よう！ -->
+<style>
+  .box {
+    width: 310px;
+    height: 310px;
+    background-color: red;
+  }
+</style>
+<script>
+  $(document).ready(function () {  //jqueryコードの実行
+    const boxwidth = $(".box").width(); //.boxクラスの要素の横幅を取得し、boxwidthに格納
+    alert("要素の幅は" + boxwidth + "pxです。"); //アラートで表示
+  });
+</script>

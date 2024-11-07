@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9番</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <p class="blue is-active">この文字を赤色にしてください。</p>
+    <style>
+        p.is-active {
+            color: red;
+        }
+        p.blue.is-active {
+             color: blue;
+        }
+    </style>
+    <script>
+        $(function() {
+            $('p').removeClass('blue');
+        })
+    </script>
+</body>
+</html>

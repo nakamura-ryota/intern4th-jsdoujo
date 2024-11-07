@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_1</title>
+</head>
+<body>
+    <div class="scroll-val">0</div>
+<div class="x-scroll">忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者CODE忍者</div>
+<style>
+    x-scroll{
+        width: 200px;
+        padding: 30px 30px;
+        background-color: gray;
+        overflow-x:scroll;
+        white-space: nowrap;
+    }
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+$(function(){
+     $('.x-scroll').on('scroll', function(){
+     let scroll_val = $(this).scrollLeft();
+     $('.scroll-val').text(scroll_val);
+     });
+    });</script>
+
+</body>
+</html>
