@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+    <style>
+      ul{
+        width: 1000px;
+        margin: 0 auto 0 auto;
+        display: flex;
+        list-style: none;
+      }
+      li{
+        height: 100px;
+        width: 100px;
+        background-color: #1d4177;
+        margin-right: 10px;
+      }
+      li:nth-child(1){background-color: rgb(0, 0, 255);}
+      li:nth-child(2){background-color: rgb(0, 0, 255);}
+      li:nth-child(3){background-color: rgb(255, 0, 0);}
+      li:nth-child(4){background-color: rgb(0, 0, 255);}
+      li:nth-child(5){background-color: rgb(0, 0, 255);}
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script>
+      // すべての li 要素を取得
+      const listColor = document.querySelectorAll("li");
+
+      // 各 li 要素にクリックイベントを設定
+      listColor.forEach(item => {
+        item.addEventListener("click", () => {
+          // 背景色が青ではない場合、青に変更する
+          // getComputedStyle は、スタイルを取得する
+          // item.stlye だと色などを取得できない
+          if (getComputedStyle(item).backgroundColor !== "rgb(0, 0, 255)") {
+            // getComputedStyle は読み取り専用なので、変更の際は item.style
+            item.style.backgroundColor = "rgb(0,0,255)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

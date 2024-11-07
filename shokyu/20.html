@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+  </head>
+  <body>
+    <h1>名前の表示</h1>
+    <input type="text" id="nameInput" placeholder="名前を入力">
+    <button onclick="showName()">表示</button>
+    <p id="displayName"></p>
+
+    <!-- 以下に「こんにちは、〇〇さん！」と表示されるスクリプトを書く -->
+    <script>
+      
+      // valueは、HTMLのフォーム要素の値を扱うための属性
+      // テキストボックスやセレクトボックス、ラジオボタン、チェックボックスなど、
+      // 様々なフォーム要素の値を取得・設定することができる
+      function showName(){
+        let input_name = document.getElementById("nameInput");
+        document.getElementById("displayName").textContent = "こんにちは、" + input_name.value + "さん！";
+      }
+    </script>
+  </body>
+</html>

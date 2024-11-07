@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.「配列を結合する関数を作ろう」</title>
+  </head>
+  <body>
+
+    <script>
+
+      // 配列の要素が数値のときの合計ができない。
+
+      const my_array = ["忍者", "CO", "DE"];
+      // const my_array = [2,3,4];
+
+      function judge(array){
+        // array.forEach(element => {
+        //   if (typeof element === "number"){
+        //     let ninja = 0;
+        //     ninja += element;
+        //   }
+        //   alert(ninja);
+        // });
+        let ninja = array.join("");
+        alert(ninja);
+      }
+      judge(my_array);
+    </script>
+  </body>
+</html>

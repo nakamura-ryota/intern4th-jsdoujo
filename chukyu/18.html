@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18.「フォーカスしたら文字を表示しよう」</title>
+  </head>
+  <body>
+    <div class="anser"></div>
+    <input type="text">
+
+    <script>
+      // input タグの要素(入力された文字)を〉取得
+      const inputText = document.querySelector("input");
+      
+      // focus イベントとは、ユーザーがテキストフィールドやテキストエリアなどに対して
+      // フォーカスした時(クリックやキーボードのTabキー)のタイミングで実行されるイベント
+      inputText.addEventListener("focus", display);
+
+      // フォーカスしたときに文字を出す関数
+      function display(){
+        document.querySelector(".anser").innerHTML = inputText.value;
+      }
+    </script>
+  </body>
+</html>
