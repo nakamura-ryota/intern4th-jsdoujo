@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21番</title>
+</head>
+<body>
+    <h1>ランダムな数値の生成</h1>
+    <button onclick="generateRandomNumber()">生成</button>
+    <p id="randomNumber"></p>
+    <script>
+        function generateRandomNumber() {
+        let random = Math.floor(Math.random() * 100) + 1;
+        document.getElementById('randomNumber').textContent = 'ランダムな数値: ' + random;
+    }
+    </script>
+    
+</body>
+</html>
