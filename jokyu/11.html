@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リストフィルター</title>
+</head>
+<!-- 「ページ内ナビゲーションを固定表示」
+
+"リストの中から、ユーザーが入力したキーワードに一致する
+アイテムのみを表示するフィルタリング機能を実装してください。
+この機能は、ユーザーがテキストボックスに入力するたびに、
+リストアイテムをリアルタイムでフィルタリングします。" -->
+
+<body>
+  <h1>リストのフィルタリング</h1>
+  <input type="text" id="searchInput" placeholder="リストを検索..." onkeyup="filterList()">
+
+  <ul id="itemList">
+    <li>リンゴ</li>
+    <li>オレンジ</li>
+    <li>バナナ</li>
+    <li>グレープ</li>
+    <li>マンゴー</li>
+    <li>スイカ</li>
+    <li>レモン</li>
+    <li>メロン</li>
+  </ul>
+
+  <!-- ここにScriptの処理を書く -->
+  <script>
+    function filterList() {
+      const input = document.getElementById('searchInput').value.toLowerCase(); // 入力値を小文字に変換
+      const items = document.querySelectorAll('#itemList li'); // すべてのリストアイテムを取得
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase(); // 各リストアイテムのテキストを小文字に変換
+        if (text.includes(input)) { // テキストが入力値を含むか確認
+          item.style.display = ''; // 含む場合、表示する
+        } else {
+          item.style.display = 'none'; // 含まない場合、非表示にする
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+<style>
+  #searchInput {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 5px 0;
+    font-size: 18px;
+  }
+
+  li.hidden {
+    display: none;
+  }
+</style>

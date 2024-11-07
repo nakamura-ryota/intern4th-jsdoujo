@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <p>クリックしたら文字を赤色→黒色にスイッチしよう。</p>
+</body>
+</html>
+
+<style>
+    p.is-active {
+    color: red;
+}
+</style>
+<!-- 「クラスのつけ剥がしをしよう」
+
+jqueryを使って、クラスのつけ剥がしをしよう！ -->
+<script>
+    $(document).ready(function() { //ready(---)iQueryのコードを実行
+        $("p").on("click", function() { //要素がクリックされたときに、関数内の処理が実行
+            $(this).toggleClass("is-active"); //thisはp要素　is-activeクラスがthisについているか確認してついていれば外し、ついてなければ追加する。
+        });
+    });
+</script>

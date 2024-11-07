@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 「リサイズされたら横幅を取得しよう」
+
+画面がリサイズされるごとに
+.valに横幅を表示しよう -->
+
+<body>
+  <div class="val">０</div>
+  <script>
+    window.addEventListener("resize", function(){ //リサイズイベントの設定
+      const width= window.innerWidth;//現在の横幅を取得
+      document.querySelector(".val").textContent = width;// 横幅を.val要素に表示
+    });
+
+    document.querySelector(".val").textContent = window.innerWidth; //初回読み込み時にも対応　window.innerWidthをvalに設定
+  </script>
+</body>
+
+</html>

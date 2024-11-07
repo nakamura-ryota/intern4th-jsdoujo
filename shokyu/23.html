@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平方根の計算</title>
+</head>
+
+<!-- 「数値の平方根を計算」
+
+ユーザーが入力した数値の平方根を計算して表示するアプリを作成してください。 -->
+
+<body>
+  <h1>平方根の計算</h1>
+  <input type="number" id="numberInput" placeholder="数値を入力">
+  <button onclick="calculateSquareRoot()">計算</button>
+  <p id="sqrtResult"></p>
+  <script>
+    function calculateSquareRoot() {
+      //入力された値を取得
+      const number = document.getElementById('numberInput').value;
+      //入力が有効確認
+      if (number >= 0) {
+        //平方根を計算
+        const sqrt = Math.sqrt(number);
+        //結果を表示
+        document.getElementById('sqrtResult').textContent ='平方根:' +sqrt;
+      } else {
+        //エラーメッセージを表示
+        document.getElementById('sqrtResult').textContent ='計算不可';
+      }
+    }
+  </script>
+</body>
+
+</html>
