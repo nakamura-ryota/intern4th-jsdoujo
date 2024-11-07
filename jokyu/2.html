@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.「配列から二桁の要素だけ抜き出そう」</title>
+  </head>
+  <body>
+    <p></p>
+
+    <script>
+      const ninja = [2,34,561,5,14];
+      let futaketa = [];
+      ninja.forEach(element => {
+        // 2桁...10以上100未満と考えた
+        if (element >= 10 && element <100 ){
+          futaketa.push(element);
+        }
+      });
+      alert(futaketa);
+      document.querySelector("p").innerHTML = ninja; // おまけ
+    </script>
+  </body>
+</html>

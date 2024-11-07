@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+  </head>
+  <body>
+    <p></p>
+    <b></b>
+
+    <script>
+      let ninja = [];
+      for (let i = 0;  i < 4; i++){
+        let num = 1 + (i*2);
+        ninja.push(num);
+      }
+
+      document.querySelector("p").innerHTML = ninja; // 7削除前
+
+      // popは配列の一番後ろを削除する（shiftは一番前）
+      let ninjaAfter = ninja.pop();
+      alert(ninja);
+
+      document.querySelector("b").innerHTML = ninja; // 7削除後
+    </script>
+  </body>
+</html>
