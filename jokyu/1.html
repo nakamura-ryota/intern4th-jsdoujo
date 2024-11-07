@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="anser"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <style>
+        .anser{
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 300px 0 20px 0;
+        }
+        ul{
+        width: 1000px;
+        margin: 0 auto 0 auto;
+        display: flex;
+        list-style: none;
+        }
+        li{
+        height: 100px;
+        background-color: #1d4177;
+        margin-right: 10px;
+        }
+        li:nth-child(1){width: 200px;}
+        li:nth-child(2){width: 120px;}
+        li:nth-child(3){width: 300px;}
+        li:nth-child(4){width: 80px;}
+        li:nth-child(5){width: 160px;}
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+        let li_total = 0;
+        $('li').each(function(index, el) {
+        if(index !== 2){
+        li_total += $(el).width();
+        $('.anser').text(li_total);
+        }
+        });
+        });
+    </script>
+</body>
+</html>
